@@ -1,52 +1,217 @@
-<!-- pages/contact.html -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
-  <link rel="preload" href="../src/output.css" as="style">
-</head>
-<body class="bg-gray-100 text-gray-800 font-sans">
-  <header class="bg-blue-600 text-white p-4">
-    <nav class="container mx-auto flex justify-between items-center">
-      <a href="/" class="text-2xl font-bold">MyPortfolio</a>
-      <ul class="flex space-x-4">
-        <li><a href="/" class="hover:underline">Home</a></li>
-        <li><a href="/about" class="hover:underline">About</a></li>
-        <li><a href="/contact" class="hover:underline">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <main class="container mx-auto px-4 py-8">
-    <section class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
-      <h1 class="text-4xl font-extrabold mb-6">Contact Us</h1>
-      <form action="#" method="POST" class="space-y-4">
-        <div>
-          <label for="name" class="block text-sm font-semibold mb-2">Name</label>
-          <input type="text" id="name" name="name" required
-            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-        </div>
-        <div>
-          <label for="email" class="block text-sm font-semibold mb-2">Email</label>
-          <input type="email" id="email" name="email" required
-            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-        </div>
-        <div>
-          <label for="message" class="block text-sm font-semibold mb-2">Message</label>
-          <textarea id="message" name="message" rows="4" required
-            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
-        </div>
-        <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-          Send Message
-        </button>
-      </form>
-    </section>
-  </main>
 
-  <footer class="bg-blue-600 text-white text-center py-4 mt-8">
-    <p>&copy; 2024 MyPortfolio. All rights reserved.</p>
-  </footer>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact</title>
+
+<link rel="preload" href="../src/output.css" as="style">
+
+</head>
+
+<body>
+
+<div class="w-full max-w-4xl mx-auto py-12 md:py-16 lg:py-20">
+
+<div class="space-y-6 text-center">
+
+<h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Get in Touch</h1>
+
+<p class="max-w-[700px] mx-auto text-muted-foreground md:text-xl">
+
+Have a question or want to work together? Fill out the form below and we'll get back to you as soon as possible.
+
+</p>
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+
+<div>
+
+<form class="space-y-4">
+
+<div class="grid grid-cols-2 gap-4">
+
+<div class="space-y-2">
+
+<label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="name">Name</label>
+
+<input class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" id="name" placeholder="Enter your name"/>
+
+</div>
+
+<div class="space-y-2">
+
+<label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="email">Email</label>
+
+<input class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" type="email" id="email" placeholder="Enter your email"/>
+
+</div>
+
+</div>
+
+<div class="space-y-2">
+
+<label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="subject">
+
+Subject
+
+</label>
+
+<input class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" id="subject" placeholder="Enter the subject"/>
+
+</div>
+
+<div class="space-y-2">
+
+<label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="message">Message</label>
+
+<textarea class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-[150px]" id="message" placeholder="Enter your message"></textarea>
+
+</div>
+
+<button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 w-full bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-500 rounded-full" type="submit">Submit</button>
+
+</form>
+
+</div>
+
+<div class="space-y-4">
+
+<div class="space-y-2">
+
+<h2 class="text-2xl font-bold">Contact Information</h2>
+
+<div class="space-y-1">
+
+<div class="flex items-center gap-2">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-blue-500">
+
+<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+
+<circle cx="12" cy="10" r="3"></circle>
+
+</svg>
+
+<p class="text-muted-foreground">123 Main St, Anytown USA 12345</p>
+
+</div>
+
+<div class="flex items-center gap-2">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-blue-500">
+
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+
+</svg>
+
+<p class="text-muted-foreground">(123) 456-7890</p>
+
+</div>
+
+<div class="flex items-center gap-2">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-blue-500">
+
+<rect width="20" height="16" x="2" y="4" rx="2"></rect>
+
+<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+
+</svg>
+
+<p class="text-muted-foreground">info@acme.com</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="space-y-2">
+
+<h2 class="text-2xl font-bold">Follow Us</h2>
+
+<div class="flex items-center gap-4">
+
+<a class="text-blue-500 hover:text-blue-600" href="#">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+
+<path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+
+</svg>
+
+<span class="sr-only">Twitter</span>
+
+</a>
+
+<a class="text-blue-500 hover:text-blue-600" href="#">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+
+<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+
+</svg>
+
+<span class="sr-only">Facebook</span>
+
+</a>
+
+<a class="text-blue-500 hover:text-blue-600" href="#">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+
+<rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+
+<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+
+<line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+
+</svg>
+
+<span class="sr-only">Instagram</span>
+
+</a>
+
+<a class="text-blue-500 hover:text-blue-600" href="#">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+
+<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+
+<rect width="4" height="12" x="2" y="9"></rect>
+
+<circle cx="4" cy="4" r="2"></circle>
+
+</svg>
+
+<span class="sr-only">LinkedIn</span>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer class="mt-12 border-t pt-6 text-center text-sm text-muted-foreground">
+
+<p>© 2024 Acme Inc. All rights reserved.</p>
+
+</footer>
+
+</div>
+
 </body>
+
 </html>
