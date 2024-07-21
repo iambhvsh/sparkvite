@@ -2,5 +2,8 @@
   "rewrites": [
     { "source": "/about", "destination": "/pages/about.html" },
     { "source": "/contact", "destination": "/pages/contact.html" }
+  ],
+  "redirects": [
+    { "source": "/404", "destination": "/pages/404.html", "statusCode": 404 }
   ]
 }
