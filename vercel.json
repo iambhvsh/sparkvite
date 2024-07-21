@@ -4,6 +4,7 @@
     { "source": "/contact", "destination": "/pages/contact.html" }
   ],
   "redirects": [
-    { "source": "/404", "destination": "/pages/404.html", "statusCode": 404 }
+    { "source": "/404", "destination": "/pages/404.html", "statusCode": 404 },
+    { "source": "/:path*", "destination": "/pages/404.html", "statusCode": 404 }
   ]
 }
