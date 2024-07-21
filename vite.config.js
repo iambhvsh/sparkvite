@@ -8,7 +8,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         about: resolve(__dirname, 'pages/about.html'),
         contact: resolve(__dirname, 'pages/contact.html'),
-        404: resolve(__dirname, 'pages/404.html')
+        notFound: resolve(__dirname, 'pages/404.html')
       }
     }
   }
