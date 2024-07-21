@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
-    "build:css": "tailwindcss -i ./src/input.css -o ./src/output.css",
+    "build:css": "tailwindcss -i ./input.css -o ./output.css",
     "build": "npm run build:css && vite build",
-    "dev": "vite",
+    "dev": "npm run build:css && vite",
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
