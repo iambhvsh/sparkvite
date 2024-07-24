@@ -1,3 +1,4 @@
+# Introduction
 
 A template for those who want to use Tailwind CSS with Html and JavaScript, in this I have used Vite for the build to be faster and used
 
@@ -16,4 +17,29 @@ This command builds your **./src/input.css** and generates a **./src/output.css*
 }
 ```
 
-You can also create more pages in the pages directory, make sure to add them in the 
+You can also create more pages in the pages directory, make sure to add them into your **vite.config.js** like this
+
+``` .js
+import { defineConfig } from 'vite';
+import { resolve } from 'path';
+
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'pages/about.html'),
+        contact: resolve(__dirname, 'pages/contact.html')
+      }
+    }
+  }
+});
+```
+
+# Get Started
+
+Open the terminal and run this command
+
+``` bash
+git clone https://github.com/iambhvsh/lighted.git
+```
