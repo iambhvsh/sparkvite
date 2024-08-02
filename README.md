@@ -1,69 +1,107 @@
-# Introduction
+# 📦 Lighted Template
 
-This template is designed for developers who want to seamlessly integrate Tailwind CSS with HTML and JavaScript, leveraging Vite for accelerated build times and optimized performance. To get started, initialize your project with the following command:
+Welcome to the **Lighted Template**! This project integrates Tailwind CSS with HTML and JavaScript, utilizing Vite for optimized build times and performance. Follow the instructions below to get started.
+
+## 🚀 Getting Started
+
+To initialize your project, run:
 
 ```bash
 npm init -y
 ```
 
-This command sets up Tailwind CSS, which builds your **./src/input.css** and generates **./src/output.css** with only the classes used in your HTML files. By using Vite, the build process is optimized, ensuring that only the necessary CSS is included, resulting in faster page loads and improved performance.
+### 🛠️ Install Dependencies
 
-## Project Configuration
+Install the necessary dependencies:
 
-To streamline your development workflow, the following scripts have been defined in your `package.json`:
+```bash
+npm install tailwindcss
+npm install --save-dev vite glob
+npx tailwindcss init
+```
+
+This configuration sets up Tailwind CSS to build your **./src/input.css** and generate **./src/output.css** with only the classes used in your HTML files, optimizing performance and page load times.
+
+## 📂 Project Configuration
+
+Define the following scripts in your `package.json`:
 
 ```json
 "scripts": {
     "build:css": "tailwindcss -i ./src/input.css -o ./src/output.css",
     "build": "npm run build:css && vite build",
-    "dev": "npm run build:css && vite"
+    "dev": "npm run build:css && vite",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
 }
 ```
 
-### Adding New Pages
+### 📄 Dynamic Page Addition
 
-To add additional pages to your project, create them in the `pages` directory and ensure their paths are included in **vite.config.js**:
+To streamline page management, you can automatically include HTML files from the `pages` directory. Create an `index.js` file in your project root:
 
 ```js
+// index.js
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import fs from 'fs';
+
+const pages = fs.readdirSync('./pages').reduce((acc, file) => {
+  const name = file.replace('.html', '');
+  acc[name] = resolve(__dirname, 'pages', file);
+  return acc;
+}, {});
 
 export default defineConfig({
   build: {
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        about: resolve(__dirname, 'pages/about.html'),
-        contact: resolve(__dirname, 'pages/contact.html')
+        ...pages
       }
     }
   }
 });
 ```
 
-## Getting Started
+This script dynamically includes all `.html` files in the `pages` directory.
 
-To begin using this template, clone the repository and install the dependencies:
+## 🏗️ Build & Development
+
+To start the development server, run:
 
 ```bash
-git clone https://github.com/iambhvsh/lighted.git
-cd lighted
-npm install
 npm run dev
 ```
 
-This will start the development server. For production builds, use:
+This will serve the project with Vite’s development features, including hot module replacement (HMR).
+
+To create a production build, use:
 
 ```bash
 npm run build
 ```
 
-## Future Enhancements
+This command generates optimized production assets ready for deployment.
 
-Currently, each new page requires manual updates to the **vite.config.js** file to specify its path. I am actively working on an enhancement to automate this process by dynamically locating all `.html` files and setting up their paths automatically. This improvement aims to simplify the configuration process, allowing for more efficient development.
+To preview the production build locally, use:
 
-## Contributions and Feedback
+```bash
+npm run preview
+```
 
-We welcome contributions and feedback from the community. Your input is invaluable in helping us improve and refine this template. Feel free to explore the project, report issues, and submit pull requests. Together, we can create a more efficient and robust development experience.
+## 📝 Fixed Issues and Ongoing Improvements
 
-Thank you for choosing this template for your Tailwind CSS and Vite projects. We look forward to seeing what you build!
+### ✅ Fixed Issues
+
+- **Manual Page Updates**: Previously, adding new pages required manual updates to **vite.config.js**. This has been resolved with dynamic page inclusion in `index.js`.
+
+### 🔧 Ongoing Improvements
+
+- **Dynamic Page Handling**: The system now dynamically locates and includes `.html` files from the `pages` directory. Future enhancements may include improved error handling and performance optimizations.
+
+## 🤝 Contributions and Feedback
+
+We welcome contributions and feedback from the community! Your input helps us enhance and refine this template. Explore the project, report issues, and submit pull requests. Together, we can improve this development experience.
+
+Thank you for using the Lighted Template for your Tailwind CSS and Vite projects. We look forward to seeing what you build!
