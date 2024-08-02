@@ -1,6 +1,8 @@
 # ⚡ Spark 
 
-This template integrates Tailwind CSS with HTML and JavaScript, utilizing Vite for optimized build times and performance. Follow the instructions below to get started.
+Spark is a modern template designed to ignite your development workflow with Vite and Tailwind CSS. It offers a streamlined setup for fast, optimized builds and an efficient development experience, helping you create stunning web applications with ease. 
+
+Follow the instructions below to get started.
 
 ## 🚀 Getting Started
 
