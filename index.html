@@ -2,46 +2,149 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Meta Tags -->
-    <meta name="description" content="Personal website of Bhavesh Patil. Stay tuned for updates!">
-    <meta property="og:title" content="Coming Soon - Bhavesh Patil">
-    <meta property="og:description" content="Personal website of Bhavesh Patil. Stay tuned for updates!">
-    <meta property="og:image" content="https://iambhvsh.vercel.app/og-image.jpg">
-    <meta property="og:url" content="https://iambhvsh.vercel.app">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Coming Soon - Bhavesh Patil">
-    <meta name="twitter:description" content="Personal website of Bhavesh Patil. Stay tuned for updates!">
-    <meta name="twitter:image" content="https://iambhvsh.vercel.app/og-image.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" href="https://iambhvsh.vercel.app/favicon.ico">
-
-    <!-- Tailwind CSS -->
-    <link rel="stylesheet" href="src/output.css">
-
-    <!-- Title -->
-    <title>Coming Soon - Bhavesh Patil</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SparkVite is a modern template designed to ignite your development workflow with Vite and Tailwind CSS. It offers a streamlined setup for fast, optimized builds and an efficient development experience.">
+  <meta name="author" content="Bhavesh Patil">
+  <meta name="keywords" content="SparkVite, Vite, Tailwind CSS, template, web development, frontend">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sparkvite.vercel.app">
+  <meta property="og:title" content="⚡ SparkVite">
+  <meta property="og:description" content="SparkVite is a modern template designed to ignite your development workflow with Vite and Tailwind CSS. It offers a streamlined setup for fast, optimized builds and an efficient development experience.">
+  <meta property="og:image" content="/">
+  <meta property="og:url" content="https://sparkvite.vercel.app">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="⚡ SparkVite">
+  <meta name="twitter:description" content="SparkVite is a modern template designed to ignite your development workflow with Vite and Tailwind CSS. It offers a streamlined setup for fast, optimized builds and an efficient development experience.">
+  <meta name="twitter:image" content="path/to/your/image.jpg">
+  <title>⚡ SparkVite</title>
+  <link rel="stylesheet" href="src/output.css">
+  <link rel="stylesheet" href="/prism.css">
+  <style>
+    pre {
+      overflow: auto;
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-black text-gray-200 leading-relaxed">
 
-<div class="flex min-h-screen flex-col bg-background">
-  <main class="flex-1 flex items-center justify-center">
-    <section class="space-y-6 text-center">
-      <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Coming Soon</h1>
-      <p class="max-w-md text-muted-foreground md:text-xl">
-        We're working hard to bring you something amazing. Stay tuned for updates!
-      </p>
-    </section>
-  </main>
-  <footer class="bg-muted p-4 text-center text-xs text-muted-foreground">
-    <p>&copy; 2024 Acme Inc. All rights reserved.</p>
-  </footer>
-</div>
-    
+  <div class="container mx-auto px-4 py-10">
+    <h1 class="text-3xl md:text-4xl font-bold mb-8 text-white">⚡ SparkVite</h1>
+
+    <p class="mb-4">SparkVite is a modern template designed to ignite your development workflow with Vite and Tailwind CSS. It offers a streamlined setup for fast, optimized builds and an efficient development experience, helping you create stunning web applications with ease.</p>
+
+    <p class="mb-8">Follow the instructions below to get started.</p>
+
+    <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-white">🚀 Getting Started</h2>
+
+    <p class="mb-4">To initialize your project, run:</p>
+
+    <pre class="bg-gray-800 p-4 rounded overflow-x-auto mb-4"><code class="language-bash">
+npm init -y
+    </code></pre>
+
+    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-white">🛠️ Install Dependencies</h3>
+
+    <p class="mb-4">Install the necessary dependencies:</p>
+
+    <pre class="bg-gray-800 p-4 rounded overflow-x-auto mb-4"><code class="language-bash">
+npm install tailwindcss
+npm install --save-dev vite glob
+npx tailwindcss init
+    </code></pre>
+
+    <p class="mb-6">This configuration sets up Tailwind CSS to build your <strong>./src/input.css</strong> and generate <strong>./src/output.css</strong> with only the classes used in your HTML files, optimizing performance and page load times.</p>
+
+    <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-white">📂 Project Configuration</h2>
+
+    <p class="mb-4">Define the following scripts in your <code>package.json</code>:</p>
+
+    <pre class="bg-gray-800 p-4 rounded overflow-x-auto mb-4"><code class="language-json">
+{
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./src/output.css",
+    "build": "npm run build:css && vite build",
+    "dev": "npm run build:css && vite",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
+    </code></pre>
+
+    <p class="mb-4">Create a <code>vercel.json</code> if it doesn't exist in your project and add this code:</p>
+
+    <pre class="bg-gray-800 p-4 rounded overflow-x-auto mb-4"><code class="language-json">
+{
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/pages/:path*.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/pages/404.html"
+    }
+  ]
+}
+    </code></pre>
+
+    <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-white">🏗️ Build & Development</h2>
+
+    <p class="mb-4">To start the development server, run:</p>
+
+    <pre class="bg-gray-800 p-4 rounded overflow-x-auto mb-4"><code class="language-bash">
+npm run dev
+    </code></pre>
+
+    <p class="mb-4">This will serve the project with Vite’s development features, including hot module replacement (HMR).</p>
+
+    <p class="mb-4">To create a production build, use:</p>
+
+    <pre class="bg-gray-800 p-4 rounded overflow-x-auto mb-4"><code class="language-bash">
+npm run build
+    </code></pre>
+
+    <p class="mb-4">This command generates optimized production assets ready for deployment.</p>
+
+    <p class="mb-4">To preview the production build locally, use:</p>
+
+    <pre class="bg-gray-800 p-4 rounded overflow-x-auto mb-6"><code class="language-bash">
+npm run preview
+    </code></pre>
+
+    <h2 class="text-2xl md:text-3xl font-semibold mb-4 mt-4 text-white">📝 Fixed Issues and Ongoing Improvements</h2>
+
+    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-white">✅ Fixed Issues</h3>
+
+    <ul class="list-disc pl-6 mb-6">
+      <li><strong>Manual Page Updates</strong>: Previously, adding new pages required manual updates to <code>vite.config.js</code>. This has been resolved with dynamic page inclusion in <code>index.js</code>.</li>
+    </ul>
+
+    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-white">🔧 Ongoing Improvements</h3>
+
+    <ul class="list-disc pl-6 mb-6">
+      <li><strong>Dynamic Page Handling</strong>: The system now dynamically locates and includes <code>.html</code> files from the <code>pages</code> directory. Future enhancements may include improved error handling and performance optimizations.</li>
+    </ul>
+
+    <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-white">🤝 Contributions and Feedback</h2>
+
+    <p class="mb-4">We welcome contributions and feedback from the community! Your input helps us enhance and refine this template. Explore the project, report issues, and submit pull requests. Together, we can improve this development experience.</p>
+
+    <p>Thank you for using the SparkVite Template for your Tailwind CSS and Vite projects. We look forward to seeing what you build!</p>
+
+    <div class="mt-6">
+      <strong class="flex items-center justify-center">Links:</strong>
+      <ul class="list-none flex items-center justify-center gap-2">
+        <li><a href="https://github.com/iambhvsh/sparkvite" class="text-blue-500">Github</a></li>
+        <li><a href="https://github.com/iambhvsh/sparkvite/issues" class="text-blue-500">Issues</a></li>
+        <li><a href="https://github.com/iambhvsh/sparkvite/fork" class="text-blue-500">Fork</a></li>
+         </ul>
+    </div>
+  </div>
+
+  <script src="/prism.js"></script>
 </body>
 
 </html>
