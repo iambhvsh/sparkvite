@@ -4,9 +4,10 @@
   "main": "index.html",
   "scripts": {
     "build:css": "tailwindcss -i ./src/input.css -o ./src/output.css",
-    "build": "npm run build:css && vite build",
+    "build": "npm run build:css && vite build && next-sitemap",
     "dev": "npm run build:css && vite",
     "preview": "vite preview",
+    "generate-sitemap": "next-sitemap",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,7 +15,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "tailwindcss": "^3.4.6"
+    "tailwindcss": "^3.4.6",
+    "next-sitemap": "^4.0.0"
   },
   "devDependencies": {
     "vite": "^5.0.0",
