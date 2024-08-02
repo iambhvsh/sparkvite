@@ -1,6 +1,6 @@
-# 📦 Lighted Template
+# ⚡ Spark 
 
-Welcome to the **Lighted Template**! This project integrates Tailwind CSS with HTML and JavaScript, utilizing Vite for optimized build times and performance. Follow the instructions below to get started.
+This template integrates Tailwind CSS with HTML and JavaScript, utilizing Vite for optimized build times and performance. Follow the instructions below to get started.
 
 ## 🚀 Getting Started
 
