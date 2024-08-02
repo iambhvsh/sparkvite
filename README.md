@@ -46,6 +46,10 @@ Create a `vercel.json` if it doesn't exists in your project and add this code:
     {
       "source": "/:path*",
       "destination": "/pages/:path*.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/pages/404.html"
     }
   ]
 }
