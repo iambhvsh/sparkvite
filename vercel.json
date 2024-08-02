@@ -3,6 +3,10 @@
     {
       "source": "/:path*",
       "destination": "/pages/:path*.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/pages/404.html"
     }
   ]
 }
