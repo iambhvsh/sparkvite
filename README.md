@@ -33,7 +33,7 @@ Define the following scripts in your `package.json`:
     "dev": "npm run build:css && vite",
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
-}
+  }
 ```
 
 ## 🏗️ Build & Development
