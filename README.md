@@ -36,6 +36,19 @@ Define the following scripts in your `package.json`:
   }
 ```
 
+Create a `vercel.json` if it doesn't exists in your project and add this code:
+
+``` json
+{
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/pages/:path*.html"
+    }
+  ]
+}
+```
+
 ## 🏗️ Build & Development
 
 To start the development server, run:
