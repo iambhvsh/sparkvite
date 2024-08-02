@@ -36,36 +36,6 @@ Define the following scripts in your `package.json`:
 }
 ```
 
-### 📄 Dynamic Page Addition
-
-To streamline page management, you can automatically include HTML files from the `pages` directory. Create an `index.js` file in your project root:
-
-```js
-// index.js
-import { defineConfig } from 'vite';
-import { resolve } from 'path';
-import fs from 'fs';
-
-const pages = fs.readdirSync('./pages').reduce((acc, file) => {
-  const name = file.replace('.html', '');
-  acc[name] = resolve(__dirname, 'pages', file);
-  return acc;
-}, {});
-
-export default defineConfig({
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        ...pages
-      }
-    }
-  }
-});
-```
-
-This script dynamically includes all `.html` files in the `pages` directory.
-
 ## 🏗️ Build & Development
 
 To start the development server, run:
