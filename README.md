@@ -1,6 +1,6 @@
-# ⚡ Spark 
+# ⚡ SparkVite
 
-Spark is a modern template designed to ignite your development workflow with Vite and Tailwind CSS. It offers a streamlined setup for fast, optimized builds and an efficient development experience, helping you create stunning web applications with ease. 
+SparkVite is a modern template designed to ignite your development workflow with Vite and Tailwind CSS. It offers a streamlined setup for fast, optimized builds and an efficient development experience, helping you create stunning web applications with ease. 
 
 Follow the instructions below to get started.
 
@@ -89,4 +89,4 @@ npm run preview
 
 We welcome contributions and feedback from the community! Your input helps us enhance and refine this template. Explore the project, report issues, and submit pull requests. Together, we can improve this development experience.
 
-Thank you for using the Lighted Template for your Tailwind CSS and Vite projects. We look forward to seeing what you build!
+Thank you for using the SparkVite Template for your Tailwind CSS and Vite projects. We look forward to seeing what you build!
