@@ -1,13 +1,12 @@
 {
-  "name": "lighted",
+  "name": "SparkVite",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
     "build:css": "tailwindcss -i ./src/input.css -o ./src/output.css",
-    "build": "npm run build:css && vite build && next-sitemap",
+    "build": "npm run build:css && vite build",
     "dev": "npm run build:css && vite",
     "preview": "vite preview",
-    "generate-sitemap": "next-sitemap",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,11 +14,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "tailwindcss": "^3.4.6",
-    "next-sitemap": "^4.0.0"
+    "tailwindcss": "^3.4.6"
   },
   "devDependencies": {
     "vite": "^5.0.0",
-    "glob": "^8.0.0"
+    "vite-plugin-sitemap": "^1.0.0" // Ensure you check for the latest version
   }
 }
