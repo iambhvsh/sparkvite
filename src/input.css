@@ -5,3 +5,8 @@
 @tailwind utilities;
 
 /* External CSS */
+
+a {
+  color: #007aff;
+  text-decoration: inherit;
+}
